@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inscription</title>
+	  <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Inscription</h1>
+    <p>Remplissez le formulaire ci-dessous pour vous inscrire :</p>
+    <form action='#httpsLendroitousinscrire.peuimporte'>
+      <fieldset>
+        <label>Votre Prénom : <input type="text" name="first-name" required /></label>
+        <label>Votre Nom : <input type="text" name="last-name" required /></label>
+        <label>Votre Email : <input type="email" name="email" required /></label>
+        <label>Créer un mot de passe : <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" name="type" class="inline" /> Professionnel</label>
+        <label><input type="radio" name="type" class="inline" /> Particulier</label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> J'accepte <a href="#httpsDesTermesEtConditions/">les termes et conditions</a>
+			  </label>
+      </fieldset>
+      <fieldset>
+        <label>Télécharger une photo du travail à effectuer : <input type="file" name="file" /></label>
+        <label>Quel est votre âge : <input type="number" name="age" min="13" max="120" />
+			  </label>
+        <label>Comment vous nous avez connu?
+          <select name="reference">
+            <option value="">(selectionner une option)</option>
+            <option value="1">Internet</option>
+            <option value="2">Réseaux Sociaux</option>
+            <option value="3">Bouche à Oreille</option>
+            <option value="4">Autre</option>
+          </select>
+        </label>
+        <label>Plus d'informations à nous communiquer sur ce que vous désirez :
+          <textarea name="info" rows="7" cols="30" placeholder="Plus d'informations sur ce que vous recherchez..."></textarea>
+			  </label>
+      </fieldset>
+      <input type="submit" value="Envoyer" />
+    </form>
+  </body>
+</html>
